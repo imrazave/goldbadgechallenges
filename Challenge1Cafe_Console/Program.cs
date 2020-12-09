@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Challenge1Cafe_Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,7 @@ namespace Challenge1Cafe_Console
     {
         static void Main(string[] args)
         {
+            Menu
         }
     }
 }

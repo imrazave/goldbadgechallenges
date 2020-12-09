@@ -1,0 +1,6 @@
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge1Cafe_Repository\bin\Debug\Challenge1Cafe_Repository.dll
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge1Cafe_Repository\bin\Debug\Challenge1Cafe_Repository.pdb
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge1Cafe_Repository\obj\Debug\Challenge1Cafe_Repository.csprojAssemblyReference.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge1Cafe_Repository\obj\Debug\Challenge1Cafe_Repository.csproj.CoreCompileInputs.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge1Cafe_Repository\obj\Debug\Challenge1Cafe_Repository.dll
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge1Cafe_Repository\obj\Debug\Challenge1Cafe_Repository.pdb
