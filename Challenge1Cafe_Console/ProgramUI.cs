@@ -78,6 +78,7 @@ namespace Challenge1Cafe_Console
         // Create new item
         private void CreateNewItem()
         {
+            Console.Clear();
             Menu newItem = new Menu();
 
             //Item Name
@@ -153,13 +154,77 @@ namespace Challenge1Cafe_Console
         // Update item
         private void UpdateItem()
         {
+            // Display all items
+            DisplayAllItems();
 
+            // Ask for the name of the item we want to update
+            Console.WriteLine("Enter the name of the item you'd like to update");
+
+            // Get that item
+            string oldItem = Console.ReadLine();
+
+            // We will build a new object
+            Menu newItem = new Menu();
+
+            //Item Name
+            Console.WriteLine("Enter the item name:");
+            newItem.ItemName = Console.ReadLine();
+
+            //Description
+            Console.WriteLine("Enter the description of the item:");
+            newItem.ItemDescription = Console.ReadLine();
+
+            //Price
+            Console.WriteLine("Enter the price of the item:");
+            string priceAsString = Console.ReadLine();
+            newItem.MealPrice = double.Parse(priceAsString);
+
+            //Ingredients
+            Console.WriteLine("Enter the ingredients of the item separated by commas (i.e: pickles, mustard, etc.)");
+            newItem.MealIngredients = Console.ReadLine();
+
+            //Meal Number
+            Console.WriteLine("Enter the meal number you would like associated with the item");
+            string stringMealNumber = Console.ReadLine();
+            newItem.MealNumber = int.Parse(stringMealNumber);
+
+            // Verify the update worked
+            bool wasUpdated = _itemRepo.UpdateExistingItem(oldItem, newItem);
+
+            if (wasUpdated)
+            {
+                Console.WriteLine("Item Successfully Updated.");
+            }
+            else
+            {
+                Console.WriteLine("Item Was Not Updated.");
+            }
         }
 
         // Delete item
         private void DeleteItem()
         {
+            DisplayAllItems();
 
+            // Get the item name they want to remove
+            Console.WriteLine("Enter the name of the item you'd like to remove:");
+
+            string input = Console.ReadLine();
+
+            // Call the delete method
+
+            bool wasDeleted = _itemRepo.RemoveItemFromMenu(input);
+
+            // If the item was deleted, say so
+            if (wasDeleted)
+            {
+                Console.WriteLine("The item was successfully deleted.");
+            }
+            else
+            {
+                Console.WriteLine("The item could not be deleted.");
+            }
+            // Otherwise state it could not be deleted
         }
 
         //Seed method
