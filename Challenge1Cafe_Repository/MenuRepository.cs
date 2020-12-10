@@ -72,7 +72,7 @@ namespace Challenge1Cafe_Repository
         {
             foreach (Menu item in _listOfMenuItems)
             {
-                if (item.ItemName == itemName)
+                if (item.ItemName.ToLower() == itemName.ToLower())
                 {
                     return item;
                 }

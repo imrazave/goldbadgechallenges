@@ -11,7 +11,8 @@ namespace Challenge1Cafe_Console
     {
         static void Main(string[] args)
         {
-            Menu
+            ProgramUI program = new ProgramUI();
+            program.Run();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Challenge1Cafe_Repository
             ItemDescription = itemDescription;
             MealPrice = mealPrice;
             MealIngredients = mealIngredients;
+            MealNumber = mealNumber;
             
         }
 
