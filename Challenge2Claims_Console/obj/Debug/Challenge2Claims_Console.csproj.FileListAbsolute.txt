@@ -1,0 +1,10 @@
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\bin\Debug\Challenge2Claims_Console.exe.config
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\bin\Debug\Challenge2Claims_Console.exe
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\bin\Debug\Challenge2Claims_Console.pdb
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\bin\Debug\Challenge2Claims_Repository.dll
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\bin\Debug\Challenge2Claims_Repository.pdb
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\obj\Debug\Challenge2Claims_Console.csprojAssemblyReference.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\obj\Debug\Challenge2Claims_Console.csproj.CoreCompileInputs.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\obj\Debug\Challenge2Claims_Console.csproj.CopyComplete
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\obj\Debug\Challenge2Claims_Console.exe
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge2Claims_Console\obj\Debug\Challenge2Claims_Console.pdb
