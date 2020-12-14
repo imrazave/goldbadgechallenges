@@ -19,6 +19,7 @@ namespace Challenge1Cafe_Tests
             _repo.AddItemToMenu(_item);
         }
 
+        // Create
         [TestMethod]
         public void AddToMenu_ShouldGetNotNull()
         {
@@ -66,6 +67,7 @@ namespace Challenge1Cafe_Tests
             Assert.AreEqual(shouldUpdate, updateResult);
         }
 
+        // Delete
         [TestMethod]
         public void DeleteItem_ShouldReturnTrue()
         {

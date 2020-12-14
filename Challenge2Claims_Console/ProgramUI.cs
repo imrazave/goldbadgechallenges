@@ -129,34 +129,27 @@ namespace Challenge2Claims_Console
 
             Queue<Claim> queueOfClaims = _claimRepo.GetClaims();
 
-            Console.WriteLine("ClaimID\tType\tDescription\t\tAmount\t\tDateOfAccident\tDateOfClaim\tIsValid\t");
+            Console.WriteLine($"{"ClaimID",-10}{"Type",-10}{"Description",-25}{"Amount",-12}{"DateOfAccident",-15}{"DateOfClaim",-15}{"IsValid",-10}");
+
             foreach (Claim claim in queueOfClaims)
             {
-                Console.WriteLine($"{claim.ClaimID}\t" +
-                    $"{claim.ClaimType} \t" +
-                    $"{claim.Description}\t\t" +
-                    $"{String.Format("{0:C}", Convert.ToInt32(claim.ClaimAmount))}\t\t" +
-                    $"{claim.DateOfIncident.ToShortDateString()}\t" +
-                    $"{claim.DateOfClaim.ToShortDateString()}\t" +
-                    $"{claim.IsValid}\t");
+                Console.WriteLine($"{claim.ClaimID,-10}{claim.ClaimType,-10}{claim.Description,-25}{String.Format("{0:C}", Convert.ToInt32(claim.ClaimAmount)),-12}{claim.DateOfIncident.ToShortDateString(),-15}{claim.DateOfClaim.ToShortDateString(),-15}{claim.IsValid,-10}");
             }
-
         }
 
         // Take care of next claim
         private void HandleNextClaim()
         {
             Console.Clear();
-            /* Claim tempClaim = new Claim(); */
             Queue<Claim> queueOfClaims = _claimRepo.GetClaims();
             Claim tempClaim = queueOfClaims.Peek();
             Console.WriteLine("Here are the details for the next claim to be handled:");
             Console.WriteLine($"ClaimID: {tempClaim.ClaimID}\n" +
                 $"Type: {tempClaim.ClaimType}\n" +
                 $"Description: {tempClaim.Description}\n" +
-                $"Amount: {tempClaim.ClaimAmount}\n" +
-                $"DateOfAccident: {tempClaim.DateOfClaim}\n" +
-                $"DateOfClaim: {tempClaim.DateOfClaim}\n" +
+                $"Amount: {String.Format("{0:C}", Convert.ToInt32(tempClaim.ClaimAmount))}\n" +
+                $"DateOfAccident: {tempClaim.DateOfIncident.ToShortDateString()}\n" +
+                $"DateOfClaim: {tempClaim.DateOfClaim.ToShortDateString()}\n" +
                 $"IsValid: {tempClaim.IsValid}");
             Console.WriteLine("Do you want to deal with this claim now (y/n)?");
             string claimResponse = Console.ReadLine().ToLower();
@@ -183,9 +176,9 @@ namespace Challenge2Claims_Console
 
         private void SeedClaimQueue()
         {
-            Claim claim1 = new Claim(1, ClaimTypes.Car, "Car Accident", 400.00, Convert.ToDateTime("2018/4/27"), Convert.ToDateTime("2018/4/25"), true);
-            Claim claim2 = new Claim(2, ClaimTypes.Home, "House fire", 4000.00, Convert.ToDateTime("2018/4/12"), Convert.ToDateTime("2018/4/11"), true);
-            Claim claim3 = new Claim(3, ClaimTypes.Theft, "Stolen Cakes", 4.00, Convert.ToDateTime("2018/6/01"), Convert.ToDateTime("2018/4/27"), false);
+            Claim claim1 = new Claim(1, ClaimTypes.Car, "Car accident on 465.", 400.00, Convert.ToDateTime("2018/4/27"), Convert.ToDateTime("2018/4/25"), true);
+            Claim claim2 = new Claim(2, ClaimTypes.Home, "House fire in kitchen.", 4000.00, Convert.ToDateTime("2018/4/12"), Convert.ToDateTime("2018/4/11"), true);
+            Claim claim3 = new Claim(3, ClaimTypes.Theft, "Stolen pancakes.", 4.00, Convert.ToDateTime("2018/6/01"), Convert.ToDateTime("2018/4/27"), false);
 
             _claimRepo.AddClaimToQueue(claim1);
             _claimRepo.AddClaimToQueue(claim2);
