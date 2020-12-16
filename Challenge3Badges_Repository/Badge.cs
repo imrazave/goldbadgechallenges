@@ -10,7 +10,7 @@ namespace Challenge3Badges_Repository
     public class Badge
     {
         public int BadgeID { get; set; }
-        public List<string> DoorName { get; set; }
+        public List<string> DoorName { get; set; } = new List<string>();
 
         public Badge() { }
 

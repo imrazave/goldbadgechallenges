@@ -73,13 +73,14 @@ namespace Challenge3Badges_Console
             Badge newBadge = new Badge();
 
             // Get the number of the badge
-            Console.WriteLine("What is the number on the badge:"); 
+            Console.WriteLine("What is the number (only integers) on the badge:"); 
             string stringBadgeId = Console.ReadLine();
             newBadge.BadgeID = int.Parse(stringBadgeId);
 
             // Get the door number that they want to add access for
             Console.WriteLine("List a door that it needs access to:"); 
             string doorId = Console.ReadLine();
+            newBadge.DoorName.Add(doorId);
             
             //_badgeRepo.AddDoorToBadge(newBadge.BadgeID, doorId);
 
@@ -93,6 +94,7 @@ namespace Challenge3Badges_Console
                 {
                     case "y":
                         Console.WriteLine("List a door that it needs access to:"); string newDoorId = Console.ReadLine();
+                        newBadge.DoorName.Add(newDoorId);
                         //_badgeRepo.AddDoorToBadge(newBadge.BadgeID, newDoorId);
                         break;
                     case "n":
@@ -104,7 +106,7 @@ namespace Challenge3Badges_Console
                 }
             }
 
-            _badgeRepo.AddBadgeToDictionary(newBadge.BadgeID, newBadge);
+            _badgeRepo.AddBadgeToDictionary(newBadge);
         }
 
         // Edit a badge
@@ -112,17 +114,18 @@ namespace Challenge3Badges_Console
         {
             //Ask for the ID of the badge we want to update / Capture the badge ID
 
-            Console.WriteLine("What is the badge number to update?"); string stringBadgeId = Console.ReadLine();
+            Console.WriteLine("What is the badge number (only integers) to update?"); string stringBadgeId = Console.ReadLine();
             int badgeId = int.Parse(stringBadgeId);
 
             Badge badge = _badgeRepo.GetBadgeByID(badgeId);
             if (badge != null)
             {
-                Console.WriteLine($"{badge.BadgeID},{" has access to doors"},{string.Join(" & ", badge.DoorName)}");
+                Console.WriteLine($"{badge.BadgeID}{" has access to door(s) "}{string.Join(" & ", badge.DoorName)}");
 
                 Console.WriteLine($"What would you like to do? \n" +
                     $"1. Remove a door \n" +
-                    $"2. Add a door");
+                    $"2. Add a door \n" +
+                    $"3. Remove all doors from the badge");
                 string input = Console.ReadLine();
                 switch (input)
                 {
@@ -151,6 +154,18 @@ namespace Challenge3Badges_Console
                         else
                         {
                             Console.WriteLine("Door not successfully added");
+                        }
+                        break;
+                    case "3":
+                        // Remove all doors from a badge
+                        if (badge.DoorName.Count <= 0)
+                        {
+                            Console.WriteLine("There are no doors to remove from this badge");
+                        }
+                        else
+                        {
+                            _badgeRepo.RemoveAllDoorsFromBadge(badgeId);
+                            Console.WriteLine($"All doors have been removed from badge {badgeId}.");
                         }
                         break;
                     default:
@@ -188,9 +203,9 @@ namespace Challenge3Badges_Console
             List<string> doorstring3 = new List<string> {"A4","A5"};
             Badge badge3 = new Badge(32345, doorstring3);
 
-            _badgeRepo.AddBadgeToDictionary(badge1.BadgeID, badge1);
-            _badgeRepo.AddBadgeToDictionary(badge2.BadgeID, badge2);
-            _badgeRepo.AddBadgeToDictionary(badge3.BadgeID, badge3);
+            _badgeRepo.AddBadgeToDictionary(badge1);
+            _badgeRepo.AddBadgeToDictionary(badge2);
+            _badgeRepo.AddBadgeToDictionary(badge3);
         }
     }
 }

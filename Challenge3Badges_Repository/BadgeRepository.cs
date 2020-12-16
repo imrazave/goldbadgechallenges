@@ -11,9 +11,9 @@ namespace Challenge3Badges_Repository
         Dictionary<int, Badge> _badgeDictionary = new Dictionary<int, Badge>();
 
         // Create
-        public void AddBadgeToDictionary(int badgeId, Badge newbadge)
+        public void AddBadgeToDictionary(Badge newbadge)
         {
-            _badgeDictionary.Add(badgeId, newbadge);
+            _badgeDictionary.Add(newbadge.BadgeID, newbadge);
         }
 
         public bool AddDoorToBadge(int badgeId, string doorName)
