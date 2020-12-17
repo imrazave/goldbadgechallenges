@@ -8,7 +8,7 @@ namespace Challenge2Claims_Repository
 {
     public class ClaimRepository
     {
-        private Queue<Claim> _queueOfClaims = new Queue<Claim>();
+        public Queue<Claim> _queueOfClaims = new Queue<Claim>();
 
         // Create
         public void AddClaimToQueue(Claim newClaim)
@@ -22,8 +22,6 @@ namespace Challenge2Claims_Repository
             return _queueOfClaims;
         }
 
-        // Update
-        // Delete
         // Helper
         public Claim GetClaimById(int claimId)
         {

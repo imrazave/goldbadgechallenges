@@ -156,20 +156,14 @@ namespace Challenge2Claims_Console
             switch (claimResponse)
             {
                 case "y":
-                    RemoveNextQueueClaim();
+                    queueOfClaims.Dequeue();
+                    Console.WriteLine("The claim has been successfully removed from queue. Press any key to continue...\n");
+                    Console.ReadKey();
                     break;
                 case "n":
                     break;
             }
             Console.Clear();
-
-        }
-        public void RemoveNextQueueClaim()
-        {
-            Queue<Claim> claimQueue = _claimRepo.GetClaims();
-            claimQueue.Dequeue();
-            Console.WriteLine("The claim has been successfully removed from queue. Press any key to continue...\n");
-            Console.ReadKey();
         }
 
         //Seed Method
