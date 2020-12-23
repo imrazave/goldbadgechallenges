@@ -52,6 +52,12 @@ namespace Challenge4Outings_Console
                         break;
                     case "4":
                         // Display outing costs by outing type
+                        DisplayCostByOutingType();
+                        break;
+                    case "5":
+                        // Exit
+                        Console.WriteLine("Goodbye!");
+                        keepRunning = false;
                         break;
                     default:
                         Console.WriteLine("Please enter a valid number");
@@ -127,9 +133,49 @@ namespace Challenge4Outings_Console
 
         private void DisplayCostByOutingType()
         {
-            Console.WriteLine("What type of outing would you like to see the total cost for?");
+            Console.WriteLine("What type of outing would you like to see the total cost for? Enter the event number: \n" +
+            "1. Golf \n" +
+            "2. Bowling \n" +
+            "3. Amusement Park \n" +
+            "4. Concert");
+
+            string typeAsString = Console.ReadLine();
+            int typeAsInt = int.Parse(typeAsString);
+            switch (typeAsString)
+            {
+                case "1":
+                    Console.WriteLine($"{"The total cost for all golf outings is: $"}{_outingsRepo.GetTotalCostByType((OutingTypes)typeAsInt)}");
+                    break;
+                case "2":
+                    Console.WriteLine($"{"The total cost for all bowling outings is: $"}{_outingsRepo.GetTotalCostByType((OutingTypes)typeAsInt)}");
+                    break;
+                case "3":
+                    Console.WriteLine($"{"The total cost for all amusement Park outings is: $"}{_outingsRepo.GetTotalCostByType((OutingTypes)typeAsInt)}");
+                    break;
+                case "4":
+                    Console.WriteLine($"{"The total cost for all concert outings is: $"}{_outingsRepo.GetTotalCostByType((OutingTypes)typeAsInt)}");
+                    break;
+                default:
+                    Console.WriteLine("Please enter a valid number");
+                    break;
+            }
         }
 
-        
+        private void SeedOutingsList()
+        {
+            Outing outing1 = new Outing(12, Convert.ToDateTime("2018/04/05"), 60.00m, 720.00m, OutingTypes.Amusement_Park);
+            Outing outing2 = new Outing(40, Convert.ToDateTime("2019/11/28"), 10.00m, 400.00m, OutingTypes.Golf);
+            Outing outing3 = new Outing(20, Convert.ToDateTime("2018/07/17"), 30.00m, 600.00m, OutingTypes.Bowling);
+            Outing outing4 = new Outing(50, Convert.ToDateTime("2017/03/01"), 55.00m, 2750.00m, OutingTypes.Concert);
+            Outing outing5 = new Outing(2, Convert.ToDateTime("2016/02/14"), 10.00m, 20.00m, OutingTypes.Bowling);
+            Outing outing6 = new Outing(30, Convert.ToDateTime("2018/03/05"), 30.00m, 900.00m, OutingTypes.Concert);
+
+            _outingsRepo.AddOutingToList(outing1);
+            _outingsRepo.AddOutingToList(outing2);
+            _outingsRepo.AddOutingToList(outing3);
+            _outingsRepo.AddOutingToList(outing4);
+            _outingsRepo.AddOutingToList(outing5);
+            _outingsRepo.AddOutingToList(outing6);
+        } 
     }
 }

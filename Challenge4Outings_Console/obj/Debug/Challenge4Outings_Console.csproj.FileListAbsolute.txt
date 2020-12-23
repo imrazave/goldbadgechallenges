@@ -1,0 +1,10 @@
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\obj\Debug\Challenge4Outings_Console.csprojAssemblyReference.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\obj\Debug\Challenge4Outings_Console.csproj.CoreCompileInputs.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\bin\Debug\Challenge4Outings_Console.exe.config
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\bin\Debug\Challenge4Outings_Console.exe
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\bin\Debug\Challenge4Outings_Console.pdb
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\bin\Debug\Challenge4Outings_Repository.dll
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\bin\Debug\Challenge4Outings_Repository.pdb
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\obj\Debug\Challenge4Outings_Console.csproj.CopyComplete
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\obj\Debug\Challenge4Outings_Console.exe
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Console\obj\Debug\Challenge4Outings_Console.pdb

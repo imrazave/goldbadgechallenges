@@ -1,0 +1,6 @@
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Repository\bin\Debug\Challenge4Outings_Repository.dll
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Repository\bin\Debug\Challenge4Outings_Repository.pdb
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Repository\obj\Debug\Challenge4Outings_Repository.csprojAssemblyReference.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Repository\obj\Debug\Challenge4Outings_Repository.csproj.CoreCompileInputs.cache
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Repository\obj\Debug\Challenge4Outings_Repository.dll
+C:\Users\farid\Desktop\ElevenFiftyProjects\GoldBadgeChallenges\Challenge4Outings_Repository\obj\Debug\Challenge4Outings_Repository.pdb
